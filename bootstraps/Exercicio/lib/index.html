@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Bootstrap</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    
+    <style>
+        .carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1); /* Cor de fundo preta com 10% opacidade*/
+    z-index: 2;
+}
+
+.carousel-item img {
+    position: relative;
+    z-index: 1;
+}
+
+        h3 {
+            color: white;
+        }
+
+        /* Estilo margens do carousel */
+        #carouselContent {
+            margin-top: 5rem; 
+            margin-bottom: 2rem; 
+        }
+
+        /* Estilo para os cards */
+        .card {
+            border: none; 
+            border-radius: 0.5rem; 
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); 
+            transition: box-shadow 0.3s ease; 
+        }
+
+        .container h5 {
+            margin-top: 1rem;
+            margin-bottom: .5rem;
+            color: #222222; 
+        }
+        
+
+       
+
+        /* Estilo para as imagens do carrossel */
+        .carousel-item img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+        }
+        
+
+        /* Estilo para o fundo da página */
+        body {
+            background-color: #343a40; 
+            
+        }
+
+        .card-text {
+            margin-top: 1rem;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">Bootstraps</a>
+            <!-- Botão de toggle para dispositivos móveis -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Links da navbar -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto"> <!-- ms-auto alinha os itens à direita -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Início</a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Item 1</a></li>
+                            <li><a class="dropdown-item" href="#">Item 2</a></li>
+                            <li><a class="dropdown-item" href="#">Item 3</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div> 
+    
+
+<!-- Conteúdo principal -->
+<div class="container">
+    <div id="carouselContent" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselContent" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselContent" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselContent" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/jellyfish-4.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/jellyfish.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/jellyfish-3.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselContent" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselContent" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+        <!-- Grid Layout Cards -->
+        <h3>Bootstrap Cards</h3>
+        <div class="row mt-4">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="./img/jellyfish-4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 1</h5>
+                        <time>Publicado em 15/02/2024 | 19:46</time>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-dark">Botão</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="./img/jellyfish-3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 2</h5>
+                        <time>Publicado em 15/02/2024 | 19:46</time>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-dark">Botão</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="./img/jellyfish.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 3</h5>
+                        <time>Publicado em 15/02/2024 | 19:46</time>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-dark">Botão</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal/Pop-Up -->
+<div class="modal" id="exemplo-modal" data-bs-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Você sabia?</h5>
+                <button data-bs-dismiss="modal" type="button" class="btn-close"></button>
+            </div>
+            <div class="modal-body">
+                <p>O Nautilus é um molusco cephalopode conhecido como "fóssil vivo", existindo praticamente inalterado desde a era dos dinossauros, há 500 milhões de anos. Sua concha em espiral serve como uma câmara de flutuação, permitindo que regule sua profundidade no oceano. Usando um sistema de propulsão a jato, o Nautilus pode nadar de forma ágil e rápida, apesar de sua aparência lenta e pesada</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Irrelevante</button>
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Incrível</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./bootstrap.bundle.min.js"></script>
+<!-- Fução para executar automaticamente a modal, com um delay de 2s, quando todo documento html for carregado -->
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        const modalExemplo = new bootstrap.Modal('#exemplo-modal');
+        setTimeout(function() {
+            modalExemplo.show();
+        }, 2000); 
+    })
+</script>
+</body>
+</html>

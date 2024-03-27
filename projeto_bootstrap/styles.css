@@ -1,0 +1,71 @@
+/* Estilos para o body */
+body {
+    font-family: Roboto, sans-serif;
+}
+
+/* Estilos para a navbar */
+.navbar {
+    background-color: #e15f41;
+}
+
+#header .nav .nav-link.active {
+    background-color: #fff;
+    color: #e15f41;
+}
+
+#header .nav .nav-link,
+.navbar-brand,
+.navbar-brand:hover,
+.nav-menu .nav-link.active:hover {
+    color: #fff;
+}
+
+/* Fonte do logo */
+.navbar-brand {
+    font-family: "Pacifico", cursive;
+}
+
+.navbar-toggler {
+    background-color: rgb(226, 87, 72)
+}
+
+/* Estilos para a seção sobre */
+.section-title {
+    font-family: "Pacifico", cursive;
+}
+
+#about-us, #menu {
+    background-color: #fce6d1;
+}
+
+/* Estilos para a seção de eventos */
+.text-colored {
+    color: #e15f41;
+}
+
+/* Estilos para o cardápio */
+
+.nav-menu .nav-link.active,
+#contact button {
+background-color: #e15f41;
+color: #fff;
+}
+.nav-menu .nav-link:hover{
+    color: #f27a5f;
+}
+
+.social-links li {
+    list-style: none;
+    display: inline;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+/* Responsivo */
+@media (max-width: 767px) {
+    .carousel-item img {
+        height: 280px;
+    }
+}
