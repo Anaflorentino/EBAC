@@ -1,0 +1,66 @@
+@use 'config/reset';
+@use 'section/products';
+@use 'config/variables';
+
+body {
+    background-color: variables.$secondaryColor;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+// header
+header {
+    background-color: variables.$primaryColor;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    }
+}
+
+
+// navbar
+.nav {
+    display: flex;
+
+    li {
+        font-weight: bold;
+        margin-left: 24px;
+    }
+
+    a {
+        color: variables.$secondaryColor;
+        text-decoration: none;
+
+        &:hover {
+            color: lighten(variables.$secondaryColor, 6%);
+        }
+    }
+}
+
+// Responsive **fixed
+@media screen and (max-width: variables.$mobile) {
+    section .products {
+        display: block;
+    }
+
+    .container {
+        max-width: 80%;
+    }
+
+    a {
+        margin-bottom: 16px;
+    }
+}
+
+
+
