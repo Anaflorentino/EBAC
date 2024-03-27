@@ -1,2 +1,2 @@
-# EBAC
-Repositório dedicado aos exercícios do curso de Front-End da EBAC
+# Exercício SASS
+Otimizando o CSS através do SASS
