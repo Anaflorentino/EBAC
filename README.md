@@ -1,2 +1,2 @@
-# EBAC
-Repositório dedicado aos exercícios do curso de Front-End da EBAC
+# Bootstrap
+Exercícios e tutoriais de referencia
