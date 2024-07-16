@@ -11,7 +11,7 @@ function Instrumentos(nome, tipo) {
 
 // Heranças
 function Violao(nome, tipo, cordas) {
-    Instrumentos.call(this, nome, tipo); // Corrigido para passar 'tipo' como segundo parâmetro
+    Instrumentos.call(this, nome, tipo); 
     this.cordas = cordas;
 
     this.tocar = function() {
@@ -39,7 +39,7 @@ function Piano(nome, tipo, teclas) {
 }
 
 function Baixo(nome, tipo, numCordas) {
-    Instrumentos.call(this, nome, tipo); // Corrigido 'instrumentos' para 'Instrumentos'
+    Instrumentos.call(this, nome, tipo); 
     this.numCordas = numCordas;
 
     this.tocar = function () {
